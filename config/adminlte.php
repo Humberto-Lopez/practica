@@ -343,7 +343,7 @@ return [
                 'icon' => 'fas fa-list',
             ],
             [
-                'text' => 'Nueva Póliza',
+                'text' => 'Nuevas Pólizas',
                 'route' => 'polizas.nuevas',
                 'icon' => 'fas fa-plus-circle',
             ],
