@@ -299,38 +299,71 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
-        [
-            'text' => 'Usuarios',
-            'can' => 'ver-clientes',
-            'icon' => 'fas fa-fw fa-user',
-            'submenu' => [
-                [
-                    'text' => 'Lista de Usuarios',
-                    'route' => 'clientes',
-                ],
-                [
-                    'text' => 'Nuevo Usuario',
-                    'route' => 'clientes.nuevo',
-                ],
+    // Sección: Panel Principal
+    ['header' => 'PANEL PRINCIPAL'],
+
+    [
+        'text' => 'Dashboard',
+        'url'  => 'home',
+        'icon' => 'fas fa-fw fa-tachometer-alt',
+    ],
+
+    // Sección: Gestión de Usuarios
+    ['header' => 'GESTIÓN DE USUARIOS'],
+
+    [
+        'text' => 'Usuarios',
+        'icon' => 'fas fa-fw fa-users',
+        'can'  => 'ver-clientes',
+        'submenu' => [
+            [
+                'text' => 'Lista de Usuarios',
+                'route' => 'clientes',
+                'icon' => 'fas fa-list',
             ],
-        ],
-        [
-            'text' => 'Polizas',
-            'can' => 'ver-polizas',
-            'icon' => 'fas fa-fw fa-info-circle',
-            'submenu' => [
-                [
-                    'text' => 'Lista de Polizas',
-                    'route' => 'polizas',
-                ],
-                [
-                    'text' => 'Nueva Polizas',
-                    'route' => 'polizas.nuevas',
-                ],
+            [
+                'text' => 'Nuevo Usuario',
+                'route' => 'clientes.nuevo',
+                'icon' => 'fas fa-user-plus',
             ],
         ],
     ],
+
+    // Sección: Gestión de Pólizas
+    ['header' => 'PÓLIZAS'],
+
+    [
+        'text' => 'Pólizas',
+        'icon' => 'fas fa-fw fa-file-invoice',
+        'can'  => 'ver-polizas',
+        'submenu' => [
+            [
+                'text' => 'Lista de Pólizas',
+                'route' => 'polizas',
+                'icon' => 'fas fa-list',
+            ],
+            [
+                'text' => 'Nueva Póliza',
+                'route' => 'polizas.nuevas',
+                'icon' => 'fas fa-plus-circle',
+            ],
+        ],
+    ],
+
+    // Sección: Administración
+    ['header' => 'ADMINISTRACIÓN'],
+
+    [
+        'text' => 'Perfil',
+        'url'  => 'profile',
+        'icon' => 'fas fa-fw fa-user-cog',
+    ],
+    [
+        'text' => 'Cerrar Sesión',
+        'url'  => 'logout',
+        'icon' => 'fas fa-fw fa-sign-out-alt',
+    ],
+],
 
     /*
     |--------------------------------------------------------------------------
